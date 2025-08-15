@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Controle de Estoque - SaaS (MVP)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Controle de Estoque</h1>
+    <nav>
+      <button id="btn-dashboard" class="tab active">Dashboard</button>
+      <button id="btn-products" class="tab">Produtos</button>
+      <button id="btn-moves" class="tab">Movimentações</button>
+      <span class="spacer"></span>
+      <button id="btn-logout" class="secondary">Sair</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="login-section" class="card">
+      <h2>Entrar</h2>
+      <p>Digite seu e-mail para receber um link mágico de acesso.</p>
+      <input id="email" type="email" placeholder="seu@email.com" />
+      <button id="send-link">Receber link</button>
+      <p id="login-info" class="muted"></p>
+    </section>
+
+    <section id="onboarding-section" class="card hidden">
+      <h2>Bem-vindo!</h2>
+      <p>Crie o nome do seu negócio para iniciar sua workspace.</p>
+      <input id="ws-name" placeholder="Ex.: Loja Exemplo" />
+      <button id="create-ws">Criar workspace</button>
+      <p id="onb-info" class="muted"></p>
+    </section>
+
+    <section id="dashboard-section" class="card hidden">
+      <h2>Dashboard</h2>
+      <div id="low-stock"></div>
+    </section>
+
+    <section id="products-section" class="card hidden">
+      <h2>Produtos</h2>
+      <div class="row">
+        <input id="p-name" placeholder="Nome" />
+        <input id="p-sku" placeholder="SKU" />
+        <input id="p-cost" type="number" step="0.01" placeholder="Custo" />
+        <input id="p-price" type="number" step="0.01" placeholder="Preço" />
+        <input id="p-min" type="number" step="0.01" placeholder="Mín." />
+        <button id="add-product">Adicionar</button>
+      </div>
+      <table>
+        <thead><tr><th>Nome</th><th>SKU</th><th>Estoque</th><th>Mín.</th></tr></thead>
+        <tbody id="products-body"></tbody>
+      </table>
+    </section>
+
+    <section id="moves-section" class="card hidden">
+      <h2>Entrada / Saída</h2>
+      <div class="row">
+        <select id="mv-product"></select>
+        <select id="mv-kind">
+          <option value="in">Entrada</option>
+          <option value="out">Saída</option>
+        </select>
+        <input id="mv-qty" type="number" step="0.01" value="1" />
+        <input id="mv-note" placeholder="Observação" />
+        <button id="save-move">Lançar</button>
+      </div>
+      <div id="mv-info" class="muted"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Feito com Supabase + Cloudflare Pages • MVP grátis</small>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

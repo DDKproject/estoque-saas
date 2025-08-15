@@ -1,0 +1,22 @@
+
+:root { --bg:#0b0c10; --panel:#15171c; --text:#e8e8e8; --muted:#9aa0a6; --accent:#4ade80; --warn:#ffe08a;}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+header{padding:16px 20px;border-bottom:1px solid #222;background:#0f1115;position:sticky;top:0}
+h1{margin:0;font-size:20px}
+nav{display:flex;gap:8px;align-items:center;margin-top:8px}
+button{border:0;padding:8px 12px;border-radius:8px;background:var(--accent);color:#111;font-weight:600;cursor:pointer}
+button.secondary{background:#2d2f36;color:var(--text)}
+button.tab{background:#2d2f36}
+button.tab.active{outline:2px solid var(--accent)}
+.spacer{flex:1}
+main{max-width:1000px;margin:20px auto;padding:0 12px}
+.card{background:var(--panel);border:1px solid #222;border-radius:12px;padding:16px;margin-bottom:16px}
+.hidden{display:none}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+input,select{background:#0f1115;border:1px solid #2a2d34;color:var(--text);padding:8px;border-radius:8px;min-width:140px}
+table{width:100%;border-collapse:collapse}
+th,td{border-bottom:1px solid #222;padding:8px;text-align:left}
+tr.low{background:#2a1f12}
+.muted{color:var(--muted)}
+#low-stock > div{padding:6px 8px;margin:6px 0;border:1px dashed #333;border-radius:8px}
+footer{padding:20px;text-align:center;color:var(--muted)}
