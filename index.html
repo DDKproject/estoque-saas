@@ -19,13 +19,28 @@
   </header>
 
   <main>
-    <section id="login-section" class="card">
-      <h2>Entrar</h2>
-      <p>Digite seu e-mail para receber um link mágico de acesso.</p>
-      <input id="email" type="email" placeholder="seu@email.com" />
-      <button id="send-link">Receber link</button>
-      <p id="login-info" class="muted"></p>
-    </section>
+    <!-- LOGIN: email + senha -->
+<section id="login-section" class="card">
+  <h2>Entrar</h2>
+  <input id="auth-email" type="email" placeholder="seu@email.com" />
+  <input id="auth-password" type="password" placeholder="Sua senha" />
+  <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap">
+    <button id="btn-login">Entrar</button>
+    <button id="btn-register" class="secondary">Criar conta</button>
+    <button id="btn-forgot" class="link">Esqueci a senha</button>
+    <button id="btn-logout" class="danger" style="display:none">Sair</button>
+  </div>
+  <p id="auth-msg" class="muted" style="margin-top:10px"></p>
+</section>
+
+<!-- RESET DE SENHA -->
+<section id="reset-section" class="card" style="display:none">
+  <h2>Definir nova senha</h2>
+  <input id="new-password" type="password" placeholder="Nova senha" />
+  <button id="btn-reset-submit">Atualizar senha</button>
+  <p id="reset-msg" class="muted" style="margin-top:10px"></p>
+</section>
+
 
     <section id="onboarding-section" class="card hidden">
       <h2>Bem-vindo!</h2>
