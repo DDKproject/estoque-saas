@@ -36,3 +36,47 @@ button.secondary{background:transparent}
 input{background:#0b0f14;border:1px solid #263042;color:var(--ink);padding:10px;border-radius:10px}
 input::placeholder{color:var(--muted)}
 a{color:var(--accent-2);text-decoration:none}
+/* Topo (header) com título e menu */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between; /* título à esquerda, menu à direita */
+  padding: 12px 0;
+}
+
+/* Título com ícone ao lado */
+.app-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;          /* espaço entre logo e texto */
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Tamanho/encaixe do logo */
+.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.2));
+}
+
+/* Menu de ações */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Só para garantir uma aparência agradável, ajuste se já tiver */
+.tab, .secondary, .danger, button{
+  background:#161a22;
+  color:#e6edf3;
+  border:1px solid #222938;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.tab.active{ outline:2px solid #22c55e; }
